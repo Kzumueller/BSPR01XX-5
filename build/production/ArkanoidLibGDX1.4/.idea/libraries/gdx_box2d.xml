@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="gdx-box2d">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/gdx-box2d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/gdx-box2d.jar!/com/badlogic/gdx/physics/box2d/graphics" />
+      <root url="jar://$PROJECT_DIR$/libs/gdx-box2d.jar!/com/badlogic/gdx/physics/box2d/joints" />
+      <root url="jar://$PROJECT_DIR$/libs/gdx-box2d.jar!/com/badlogic/gdx/physics/box2d/utils" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
