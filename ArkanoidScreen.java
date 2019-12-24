@@ -9,8 +9,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Shape;
-import com.badlogic.gdx.scenes.scene2d.Action;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
@@ -21,7 +19,7 @@ public class ArkanoidScreen implements Screen {
   final int playfieldHeight = 720;
 
   public void addBricks(TextureRegion region, int[][] bricks) {
-    Group brickGroup = new Group();
+    var brickGroup = new Group();
     brickGroup.setName("brickGroup");
     stage.addActor(brickGroup);
 
@@ -55,6 +53,7 @@ public class ArkanoidScreen implements Screen {
     Shape box = Box2DTools.createBoxShape(Gdx.graphics.getWidth(), 16);
     Box2DTools.addFixtureToBody(body, box, 1);
 
+    //addBricks(atlas.findRegion("yellow"), Level1.debugWinCondition);
     addBricks(atlas.findRegion("yellow"), Level1.yellow);
     addBricks(atlas.findRegion("cyan"), Level1.cyan);
     addBricks(atlas.findRegion("orange"), Level1.orange);
@@ -64,17 +63,17 @@ public class ArkanoidScreen implements Screen {
     addBricks(atlas.findRegion("red"), Level1.red);
     addBricks(atlas.findRegion("blue"), Level1.blue);
 
-    // Loesung Aufgabe a)
-    world.setContactListener(new BrickDestructionListener());
-
     // Loesung Aufgabe b)
     stage.addActor(new Lives(atlas.findRegion("paddleSmall")));
 
     // Loesung Aufgabe c)
     stage.addActor(new Score());
 
-    // TODO: Loesung Aufgabenteil d)
+    // Loesung Aufgabenteil d)
+    stage.addActor(new MessageLabel());
 
+    // Loesung Aufgabe a)
+    world.setContactListener(new BrickDestructionListener(stage));
   }
 
   public void makeBorder(float x) {

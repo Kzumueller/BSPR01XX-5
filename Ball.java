@@ -10,6 +10,8 @@ public class Ball extends Box2DActor {
   final float startVelocityX = 11;
   final float startVelocityY = -11;
 
+  private boolean iAmDoomed = false;
+
   public Ball(World world, TextureRegion region) {
     super(Box2DTools.createDynamicBody(world, 400, 400), region);
     setName("ball");
@@ -22,14 +24,29 @@ public class Ball extends Box2DActor {
     body.setLinearVelocity(startVelocityX, startVelocityY);
   }
 
+  public void doom() {
+    iAmDoomed = true;
+  }
+
   @Override
   public void act(float delta) {
     super.act(delta);
-    if (body.getPosition().y < 0) {
+
+    if(iAmDoomed) {
+      body.getWorld().destroyBody(body);
+      remove();
+      return;
+    }
+
+    if (body.getPosition().y >= 0) return;
+
+    if(((Lives) getStage().getRoot().findActor("lives")).decrement()) {
       body.setTransform(startPosition, 0);
       body.setAngularVelocity(0);
       body.setLinearVelocity(startVelocityX, startVelocityY);
-      ((Lives) getStage().getRoot().findActor("lives")).decrement();
+    } else {
+      var label = (MessageLabel) getStage().getRoot().findActor("messageLabel");
+      label.show("Get it together!");
     }
   }
 }

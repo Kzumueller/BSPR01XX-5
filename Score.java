@@ -16,8 +16,8 @@ public class Score extends Group {
     setName("scoreLabel");
 
     BitmapFont font = new BitmapFont(Gdx.files.internal("data/fonts/movie-star.fnt"), false);
-    // TODO: make two labels with different LabelStyles and add Labels to group
-    nameLabel = new Label("HANS", new LabelStyle(font, Color.RED));
+    // creating two labels with different LabelStyles and adding Labels to group
+    nameLabel = new Label("SCORE", new LabelStyle(font, Color.RED));
     scoreLabel = new Label("0", new LabelStyle(font, Color.WHITE));
 
     setPosition(10, Gdx.graphics.getHeight() - 2 * nameLabel.getHeight() - 10);
