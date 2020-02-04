@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Arkanoid">
+    <output-path>$PROJECT_DIR$/build/artifacts/Arkanoid</output-path>
+    <root id="archive" name="ArkanoidLibGDX1.4.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="ArkanoidLibGDX1.4" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-backend-lwjgl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-backend-lwjgl.jar" path-in-jar="/com/badlogic/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-box2d.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-box2d.jar" path-in-jar="/com/badlogic/gdx/physics/box2d/graphics/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-box2d.jar" path-in-jar="/com/badlogic/gdx/physics/box2d/joints/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-box2d.jar" path-in-jar="/com/badlogic/gdx/physics/box2d/utils/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-natives.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-box2d-natives.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx-backend-lwjgl-natives.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gdx.jar" path-in-jar="/com/badlogic/gdx/" />
+    </root>
+  </artifact>
+</component>

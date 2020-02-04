@@ -30,7 +30,7 @@ public class Lives extends Group {
   }
 
   // returns false if no lives remain
-  boolean decrement() {
+  public boolean decrement() {
     return --lives > 0;
   }
 }

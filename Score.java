@@ -23,8 +23,6 @@ public class Score extends Group {
     setPosition(10, Gdx.graphics.getHeight() - 2 * nameLabel.getHeight() - 10);
 
     nameLabel.setPosition(0, 5f + scoreLabel.getHeight());
-    nameLabel.getStyle().fontColor = Color.RED;
-    scoreLabel.getStyle().fontColor = Color.WHITE;
     addActor(nameLabel);
     addActor(scoreLabel);
   }

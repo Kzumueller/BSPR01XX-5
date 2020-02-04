@@ -45,6 +45,7 @@ public class Ball extends Box2DActor {
       body.setAngularVelocity(0);
       body.setLinearVelocity(startVelocityX, startVelocityY);
     } else {
+      doom();
       var label = (MessageLabel) getStage().getRoot().findActor("messageLabel");
       label.show("Get it together!");
     }
