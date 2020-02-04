@@ -1,9 +1,0 @@
-import com.badlogic.gdx.Game;
-
-public class Box2DGame extends Game
-{
-  public void create()
-  {
-    setScreen(new Box2DScreen());
-  }
-} 
